@@ -15,4 +15,9 @@ const requires = [
 
 window.app = angular.module('app', requires);
 
+
+// see also: https://github.com/ded/script.js
+import f from "./test/testik.js"
+console.log(f())
+
 angular.bootstrap(document.getElementById('app'), ['app']);
