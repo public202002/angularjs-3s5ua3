@@ -105,19 +105,27 @@ console.log("///////////////////////",Zone)
 
 ///////////////////////////////////////////////////////
 
-let elt;
-           const testZone = Zone.current.fork({name: 'test'});
+let elt; elt = document.createElement('div');
 
-             elt = document.createElement('div');
-             let d = document.getElementsByTagName("body")[0]
+           const testZone = Zone.current.fork({name: 'test'});
+           let d = document.getElementsByTagName("body")[0]
+
+           function f(){
+             
              d.appendChild(elt);
           
                window.ob = new MutationObserver(function() {
                  console.log(888,Zone.current === testZone);
+
+                 elt.innerHTML = '<p>hey hey</p>';
                 
                });
 
              window.ob.observe(elt, {childList: true});
+           }
+
+           testZone.run(f)
+           //f()
 
              elt.innerHTML = '<p>hey</p>';
           
