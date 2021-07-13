@@ -22,4 +22,4 @@ console.log(f())
 
 angular.bootstrap(document.getElementById('app'), ['app']);
 
-import "./test/vizone.js"
+// import "~/test/vizone.js"
