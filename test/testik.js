@@ -37,7 +37,7 @@ setTimeout(() => {
 //import zone from "https://unpkg.com/zone.js"
 
 //import "~/test/vizone.js"
- import "~/test/zone.js"
+  //import "~/test/zone.ts"
 
 
 // https://javascript.plainenglish.io/what-is-zone-why-zone-8534350480dd
@@ -58,7 +58,7 @@ function executeUnderNewContext() {
   console.log("Executing the Function within a Zone");
   let xx =13
   setTimeout(() => {
-    console.log("Entering the 'setTimeout' within the Zone " , this, Zone.current(), xx) 
+    console.log("Entering the 'setTimeout' within the Zone " , this, zone, xx) 
   }, 3000) 
 }
 
@@ -86,5 +86,5 @@ console.log(window.zone)
 
 // https://medium.com/swlh/what-is-zone-js-and-how-can-i-use-it-63ce08a55962
 
-
+ 
 export default f; 
