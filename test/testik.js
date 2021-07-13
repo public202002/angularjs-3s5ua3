@@ -106,6 +106,8 @@ console.log("///////////////////////",Zone)
 ///////////////////////////////////////////////////////
 // https://github.com/angular/zone.js/tree/master/test/browser
 
+/*
+
 let elt; elt = document.createElement('div');
 
            const testZone = Zone.current.fork({name: 'test'});
@@ -118,9 +120,15 @@ let elt; elt = document.createElement('div');
                window.ob = new MutationObserver(function() {
                  console.log(888,Zone.current === testZone);
 
+                 setTimeout(function(){
+
+                  elt.innerHTML = '<p>hey hey ' + (new Date()).getSeconds + '</p>';
+
+                 },5000)
+
                  elt.innerHTML = '<p>hey hey</p>';
                 
-               });
+                 });
 
              window.ob.observe(elt, {childList: true});
            }
@@ -130,7 +138,7 @@ let elt; elt = document.createElement('div');
 
              elt.innerHTML = '<p>hey</p>';
           
-
+*/
 
 ////////////////////////////////////////////////////////
 
