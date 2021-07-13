@@ -42,6 +42,7 @@ setTimeout(() => {
 
 // https://javascript.plainenglish.io/what-is-zone-why-zone-8534350480dd
 
+/*
 
 function createNewContext() {
   console.log(zone.x)
@@ -50,6 +51,8 @@ zone.x = "root zone"
 var myZone = zone.fork();
 myZone.x = "forked zone"
 myZone.run(createNewContext);
+*/
+
 
 ///////////////////////////////////////////////// 
 
@@ -72,6 +75,7 @@ var myZoneSpecifiation = {
   }
 };
 
+/*
 zone.x = "root zone"
 zone.parent.x = "root parent zone"
 //var myData = {myData:"mojeData"}
@@ -85,6 +89,8 @@ console.log("/EXAMPLE 2")
 
 
 console.log(window.zone)
+*/
+
 
 //////////////////////////////////////////////////////
 
@@ -95,5 +101,31 @@ console.log(window.zone)
 
 
 console.log("///////////////////////",Zone)
+
+
+///////////////////////////////////////////////////////
+
+let elt;
+           const testZone = Zone.current.fork({name: 'test'});
+
+             elt = document.createElement('div');
+             let d = document.getElementsByTagName("body")[0]
+             d.appendChild(elt);
+          
+               window.ob = new MutationObserver(function() {
+                 console.log(888,Zone.current === testZone);
+                
+               });
+
+             window.ob.observe(elt, {childList: true});
+
+             elt.innerHTML = '<p>hey</p>';
+          
+
+
+////////////////////////////////////////////////////////
+
+
+
  
 export default f; 
