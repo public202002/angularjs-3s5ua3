@@ -90,6 +90,8 @@ console.log(window.zone)
 
 // https://medium.com/swlh/what-is-zone-js-and-how-can-i-use-it-63ce08a55962
 //https://docs.google.com/document/d/1F5Ug0jcrm031vhSMJEOgp1l-Is-Vf0UCNDY-LsQtAIY/edit
+//https://blog.thoughtram.io/angular/2016/01/22/understanding-zones.html
+
 
 
 console.log("///////////////////////",Zone)
