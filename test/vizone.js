@@ -2,7 +2,7 @@
 if (!window.zone) {
   (function(){
   
-  'use strict';x
+  'use strict';
   var zone;
   
   function Zone(parentZone, data) {
