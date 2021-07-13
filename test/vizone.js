@@ -1,7 +1,8 @@
+
 if (!window.zone) {
   (function(){
   
-  'use strict';
+  'use strict';x
   var zone;
   
   function Zone(parentZone, data) {

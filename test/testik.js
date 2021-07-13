@@ -36,9 +36,9 @@ setTimeout(() => {
 
 //import zone from "https://unpkg.com/zone.js"
 
-import "~/test/vizone.js"
-//import "~/test/zone.ts"
-
+// import "~/test/vizone.js"
+// import "~/test/zone.ts"
+ import "~/test/zonejs.js"
 
 // https://javascript.plainenglish.io/what-is-zone-why-zone-8534350480dd
 
