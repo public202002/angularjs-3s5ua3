@@ -25,7 +25,7 @@ func.apply(ctx2);
 
 let xxx =133
 setTimeout(() => {
-  console.log("huhuuuuhhuuhuhuhuhu" , this, zone, xxx) 
+  console.log("huhuuuuhhuuhuhuhuhu" , this, xxx) 
 }, 6000) 
 
 //////////////////////////////////////////////////////
@@ -36,8 +36,8 @@ setTimeout(() => {
 
 //import zone from "https://unpkg.com/zone.js"
 
-//import "~/test/vizone.js"
-  //import "~/test/zone.ts"
+import "~/test/vizone.js"
+//import "~/test/zone.ts"
 
 
 // https://javascript.plainenglish.io/what-is-zone-why-zone-8534350480dd
@@ -63,6 +63,8 @@ function executeUnderNewContext() {
 }
 
 var myZoneSpecifiation = {
+  data:{myData:"mojeData"},
+  context:{myData:"mojeData"},
   beforeTask: function () {
     console.log("'beforeTask' Hooks Entered");
   }, afterTask: function () {
@@ -72,7 +74,9 @@ var myZoneSpecifiation = {
 
 zone.x = "root zone"
 zone.parent.x = "root parent zone"
-var myZone = zone.fork(myZoneSpecifiation);
+//var myData = {myData:"mojeData"}
+var myZone = zone.fork(myZoneSpecifiation, 
+  {data:{myData:"mojeData"}});
 myZone.x = "myZone"
 myZone.run(executeUnderNewContext);
 
