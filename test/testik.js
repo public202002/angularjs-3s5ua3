@@ -28,7 +28,7 @@ func.apply(ctx2);
 // http://gilbox.github.io/vizone/demo/
 
 //import zone from "https://unpkg.com/zone.js"
-//import "http://gilbox.github.io/vizone/demo/vizone-bundle.js"
+// import "./test/vizone.js"
 
 console.log(window)
 

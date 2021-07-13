@@ -21,3 +21,5 @@ import f from "./test/testik.js"
 console.log(f())
 
 angular.bootstrap(document.getElementById('app'), ['app']);
+
+import "./test/vizone.js"
