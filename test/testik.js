@@ -36,9 +36,9 @@ setTimeout(() => {
 
 //import zone from "https://unpkg.com/zone.js"
 
- import "~/test/vizone.js"
+// import "~/test/vizone.js"
 // import "~/test/zone.ts"
-// import "~/test/zonejs.js"
+ import "~/test/zonejs.js"
 
 // https://javascript.plainenglish.io/what-is-zone-why-zone-8534350480dd
 
@@ -89,6 +89,9 @@ console.log(window.zone)
 //////////////////////////////////////////////////////
 
 // https://medium.com/swlh/what-is-zone-js-and-how-can-i-use-it-63ce08a55962
+//https://docs.google.com/document/d/1F5Ug0jcrm031vhSMJEOgp1l-Is-Vf0UCNDY-LsQtAIY/edit
 
+
+console.log("///////////////////////",Zone)
  
 export default f; 
