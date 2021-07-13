@@ -21,6 +21,13 @@ const func = function() {
 func.apply(ctx1);
 func.apply(ctx2);
 
+/////////////////////////////////////////////////////
+
+let xxx =133
+setTimeout(() => {
+  console.log("huhuuuuhhuuhuhuhuhu" , this, zone, xxx) 
+}, 6000) 
+
 //////////////////////////////////////////////////////
 // https://angular.io/guide/zone
 // zonejs    https://fossies.org/linux/angular/packages/zone.js/README.md
@@ -29,11 +36,55 @@ func.apply(ctx2);
 
 //import zone from "https://unpkg.com/zone.js"
 
-import "~/test/vizone.js"
+//import "~/test/vizone.js"
+ import "~/test/zone.js"
 
+
+// https://javascript.plainenglish.io/what-is-zone-why-zone-8534350480dd
+
+
+function createNewContext() {
+  console.log(zone.x)
+}
+zone.x = "root zone"
+var myZone = zone.fork();
+myZone.x = "forked zone"
+myZone.run(createNewContext);
+
+///////////////////////////////////////////////// 
+
+console.log("EXAMPLE 2")
+function executeUnderNewContext() {
+  console.log("Executing the Function within a Zone");
+  let xx =13
+  setTimeout(() => {
+    console.log("Entering the 'setTimeout' within the Zone " , this, Zone.current(), xx) 
+  }, 3000) 
+}
+
+var myZoneSpecifiation = {
+  beforeTask: function () {
+    console.log("'beforeTask' Hooks Entered");
+  }, afterTask: function () {
+    console.log("'afterTask' Hooks Entered");
+  }
+};
+
+zone.x = "root zone"
+zone.parent.x = "root parent zone"
+var myZone = zone.fork(myZoneSpecifiation);
+myZone.x = "myZone"
+myZone.run(executeUnderNewContext);
+
+console.log("Executed outside the Zone")
+console.log("/EXAMPLE 2")
 
 
 console.log(window.zone)
 
 //////////////////////////////////////////////////////
-export default f;
+
+// https://medium.com/swlh/what-is-zone-js-and-how-can-i-use-it-63ce08a55962
+
+
+export default f; 
