@@ -8,6 +8,8 @@
     https://raw.githubusercontent.com/angular/zone.js/master/dist/zone.js
 
 */
+
+
 (function (factory) {
     typeof define === 'function' && define.amd ? define(factory) :
         factory();
@@ -303,6 +305,11 @@
             };
             return Zone;
         }());
+
+//hacking testing 
+         window.Zonex = Zone;
+         console.log(8888, Zonex)
+
         Zone.__symbol__ = __symbol__;
         var DELEGATE_ZS = {
             name: '',
