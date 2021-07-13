@@ -106,8 +106,10 @@ console.log("///////////////////////",Zone)
 ///////////////////////////////////////////////////////
 // https://github.com/angular/zone.js/tree/master/test/browser
 
-/*
 
+/**************  problem test commented  ************ */
+
+/*
 let elt; elt = document.createElement('div');
 
            const testZone = Zone.current.fork({name: 'test'});
