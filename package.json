@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "dependencies": {
+    "@uirouter/angularjs": "1.0.15",
     "angular": "1.6.9",
-    "@uirouter/angularjs": "1.0.15"
+    "jquery": "^3.6.0"
   }
 }
