@@ -3,6 +3,10 @@ class HomeCtrl {
     'ngInject';
 
     this.name = "AngularJS";
+    this.sendMess = function($event){
+      console.log($event.target)
+      this.name = "huhu"
+    }
   }
 }
 
